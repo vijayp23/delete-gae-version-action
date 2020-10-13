@@ -1,0 +1,22 @@
+name: 'Delete GAE versions'
+description: 'This action will allow you to delete Google App Engine versions which are not receiving taffic'
+inputs:
+  service-account:
+    description: 'Service account file'
+    required: true
+  project-id:
+    description: 'Project id'
+    required: true
+  service-name:
+    description: 'Service name'
+    required: true
+  retain-versions:
+    description: 'Keep number of latest versions deployed'
+    required: false
+    default: 0
+  debug:
+    description: 'Debug action'
+    dafault: false
+runs:
+  using: 'node12'
+  main: 'index.js'
