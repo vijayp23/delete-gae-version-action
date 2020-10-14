@@ -1,5 +1,7 @@
 # delete-gae-version-action
 
+[![Build Status](https://github.com/vijayp23/delete-gae-version-action/workflows/Test%20Action/badge.svg)](https://github.com/vijayp23/delete-gae-version-action/actions?query=workflow:"Test Action")
+
 This action will allow you to delete [Google App Engine](https://cloud.google.com/appengine) versions which do not receive any traffic.
 
 ## Usage
