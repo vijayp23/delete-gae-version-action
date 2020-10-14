@@ -5,13 +5,15 @@ This action will allow you to delete [Google App Engine](https://cloud.google.co
 ## Usage
 ```yaml
 - name: Delete GAE versions
-  uses: vp-ework/delete-gae-version-action@master
+  uses: vijayp23/delete-gae-version-action@1.0.0
   with:
     service-account: ${{ secrets.SERVICE_ACCOUNT }}
     project-id: ${{ secrets.PROJECT_ID }}
     service-name: ${{ secrets.SERVICE_NAME }}
     # Optional, default is 0
     retain-versions: 1
+    # Optional, default is false
+    debug: false
 ```
 ## Inputs
 
@@ -27,7 +29,8 @@ This action will allow you to delete [Google App Engine](https://cloud.google.co
 * `service-name`: name of the GAE service
 
 **Optional**
-* `retain-versions`: number of versions to be retained (not deleted). Versions are ordered based on last deployed date. This option will allow to keep latest versions.
+* `retain-versions`: number of versions to be retained (not deleted). Versions are ordered based on last deployed date. This option will allow to keep latest versions
+* `debug`: test action and check version details
 
 ## Note
 * You cannot delete a version of a service that is currently receiving traffic

@@ -45,7 +45,7 @@ async function run() {
     core.endGroup();
 
     if (!isDebug) {
-      core.startGroup('Delete service versions');
+      core.startGroup('Delete versions');
       execSync(`gcloud app versions delete --project=${projectId} --service=${serviceName} ${versions} --quiet`, {stdio: 'inherit'});
       core.endGroup();
     }
