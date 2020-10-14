@@ -1,0 +1,15 @@
+name: "Test Action"
+
+on: [push]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ./
+      with:
+        service-account: ${{ secrets.SERVICE_ACCOUNT }}
+        project-id: ${{ secrets.PROJECT_ID }}
+        service-name: ${{ secrets.SERVICE_NAME }}
+        debug: true
